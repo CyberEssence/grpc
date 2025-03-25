@@ -35,9 +35,6 @@ COPY --from=builder /go/bin/migrate /usr/local/bin/migrate
 # Копируем скомпилированное приложение
 COPY --from=builder /app/call-service .
 
-# Здоровье приложения
-HEALTHCHECK --interval=5s --timeout=5s --retries=3 CMD wget --no-verbose --tries=1 --spider http://localhost:8080/health || exit 1
-
 # Открываем порт для HTTP
 EXPOSE 8080
 

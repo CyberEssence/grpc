@@ -24,4 +24,6 @@ curl -X GET http://localhost:8080/calls -H "Authorization: Bearer YOUR_TOKEN"
 
 curl -X PATCH http://localhost:8080/calls/<CALL_ID>/status -H "Content-Type: application/json" -H "Authorization: Bearer <YOUR_BEARER_TOKEN>" -d "{\"status\": \"закрыта\"}"
 
+Токен JWT можно получить через grpcui
+
 Также можно запустить тесты, перейдя по пути test\call-service\internal\handler командой go test

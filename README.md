@@ -2,6 +2,7 @@
 
 Инструкция по запуску приложения:
 1) перейти в директорию test
+2) создать 2 бд в pgadmin (утилита postgresql) с названиями auth_service и call_service (предварительно должен быть установлен PostgreSQL 17)
 2) собрать docker образ командой docker-compose.exe up --build (предварительно должен быть установлен docker desktop на винде)
 3) далее выполнять запросы через grpcui/curl
 

@@ -35,9 +35,6 @@ COPY --from=builder /go/bin/migrate /usr/local/bin/migrate
 # Копируем скомпилированное приложение
 COPY --from=builder /app/auth-service .
 
-# Здоровье приложения
-HEALTHCHECK --interval=5s --timeout=5s --retries=3 CMD nc -z localhost 50051 || exit 1
-
 # Открываем порт для gRPC
 EXPOSE 50051
 
